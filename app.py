@@ -39,7 +39,9 @@ def predic():
         BounceRates = request.form.get('BounceRates')
         ExitRates  = request.form.get('ExitRates')
         PageValues   = request.form.get('PageValues')
-        variables = [Administrative, Administrative_Duration, Informational,        Informational_Duration,ProductRelated,ProductRelated_Duration,BounceRates,
+        variables = [Administrative, Administrative_Duration, 
+                     Informational,Informational_Duration,ProductRelated,
+                     ProductRelated_Duration,BounceRates,
                      ExitRates, PageValues ]
         predict = model_load(variables)
 

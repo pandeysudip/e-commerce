@@ -29,6 +29,18 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/contact.html')
+def contact():
+    # Return the template
+    return render_template('contact.html')
+
+
+@app.route('/data.html')
+def data():
+    # Return the template
+    return render_template('data.html')
+
+
 @app.route('/send', methods=["GET", "POST"])
 def predic():
     if request.method == "POST":

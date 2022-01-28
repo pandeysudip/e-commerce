@@ -3,9 +3,9 @@ import numpy as np
 
 # defining a function for combining two columns
 def avgDuration(c, d):
-    if d == 0:
+    if d == 0 or c==0:
         result = 0
-    else:
+    elif (c!=0) or (d!=0):
         result = float(d)/float(c)
     return result
 
@@ -18,7 +18,7 @@ def model_load(variables):
     ExitRates=variables[7]
     PageValues=variables[8]
     final_variables=[Administrative_Avg,Informational_Avg,
-               ProductRelated_Avg,BounceRates,ExitRates,PageValues ]
+               ProductRelated_Avg,BounceRates,ExitRates,PageValues]
     # using standardscaler for transformation
     scaler = joblib.load('scaler.pkl')
     X_scaler = scaler.transform([final_variables])
@@ -26,5 +26,9 @@ def model_load(variables):
     test_data = scaler.transform(X_scaler)
     trained_model = joblib.load('model.pkl')
     prediction = trained_model.predict(test_data)
+    if prediction == [0]:
+        return "Based on our trained model it looks like 'Customer will not BUY'"
+    else:
+        return "Based on our trained model it looks like 'Customer will BUY'"
 
-    return prediction
+

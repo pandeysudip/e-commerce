@@ -11,7 +11,7 @@ def avgDuration(c, d):
 
 # defing model to predict based on our saved model
 def model_load(variables):
-    Administrative_Avg=avgDuration(variables[0], variables[61])
+    Administrative_Avg=avgDuration(variables[0], variables[6])
     Informational_Avg=avgDuration(variables[2], variables[3])
     ProductRelated_Avg=avgDuration(variables[4], variables[5])
     BounceRates=variables[6]

@@ -12,6 +12,7 @@ app = Flask(__name__)
 #client = MongoClient("mongodb://localhost:27017")
 #db = client['e-commerce']
 
+# os.environ.get('MONGO_URI', '')
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI', '')
 app.config['MONG_DBNAME'] = 'e-commerce'
 mongo = PyMongo(app)
@@ -23,7 +24,7 @@ all_data = mongo.db['all_data']
 @app.route('/')
 def home():
     # Return the template
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 @app.route('/index.html')

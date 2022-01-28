@@ -4,17 +4,20 @@ import os
 from model_param import model_load
 from bson import json_util
 from pymongo import MongoClient
-
+from flask_pymongo import PyMongo
 # Create an instance of Flask
 app = Flask(__name__)
 
 # Use PyMongo to establish Mongo connection
-client = MongoClient("mongodb://localhost:27017")
-db = client['e-commerce']
+#client = MongoClient("mongodb://localhost:27017")
+#db = client['e-commerce']
 
+app.config["MONGO_URI"] = os.environ.get('MONGO_URI', '')
+app.config['MONG_DBNAME'] = 'e-commerce'
+mongo = PyMongo(app)
 
 # creating collection (add mongo)
-all_data = db['all_data']
+all_data = mongo.db['all_data']
 
 
 @app.route('/')
@@ -74,7 +77,7 @@ def predic():
 
 
 @ app.route("/data/all_data")
-def all_data():
+def get_data():
     all_data_list = list(all_data.find())
     return json.dumps(all_data_list, default=json_util.default)
 

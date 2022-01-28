@@ -1,70 +1,107 @@
 {% extends "layout.html" %}
 {% block body %}
 <!--Home-->
-<section id="tal" class=" bg-dark text-light p-5 mt-5 text-center text-sm-start">
-    <div >
+<section id="tal" class="bg-dark text-light p-5 mt-5 text-center text-sm-start">
+    <div>
+        <h3 class=" p-3 text-warning text-center">Artificial Intelligence (AI) to Predict Whether a Customer Will Buy a Product or Not</h3>
+    </div>
+    <div class="sidebar">
         <div class="d-lg-flex">
-            <div class="row">
-                <div class="column">
-                <h2 class=" p-3 text-danger text-center">Machine Learning to Predict Whether a Customer Will Buy a Product or Not</h2>
-                    <p class="text-warning">
+            <div class="container fluid">
+                <h3 class=" p-1 text-warning text-center">Summary</h3>
+                <div>
+                    <p class="text-primary">
                         
                     </p>
+                    <h5>Some quick numbers:</h5>
+                    <h6 class="text-success">
+                         
+                    </h6>
+
+                    <h5>Differnt Model Used:</h5>
+
+                    <p class="text-success">
+
+
+                    </p>
+
+                    <div class="container">
+                        <div class="jumbotron text-center bg-dark text-light  p-3">
+                            <h3><span class="text-danger">Model Prefoemance using different learning algorithm</span></h3>
+                        </div >
+                    </div >
+                    
+                
+                    <div class="d-md-flex ">
+                        <div class="container-fluid bg-black text-center">
+                            <h6 class="text-white p-3"></h6>
+                            <div id="sample-metadata-img"></div>
+                        </div>
+                        
+                    </div>
+                        
                 </div>
             </div>
-        </div>  
-        <div class="card bg-danger text-white text-center p-3 ">
-            <h3 class="text-white">Model Predection</h3>
-        </div>
-        <section class="bg-info">
-            <div class= "p-3" >
-                <form action = "/send" method = "post">
-                    <div class="mb-3  lead text-primary">
-                        <label  for="Monthly Owner Cost">Administrative</label>
-                        <input  type="number" step="any" name="Administrative" id="Administrative" />                
+            <div class="container p-2 ">
+                <h2 class='text center'>Model Predection</h2>
+                <div class= "bg-info" >
+                    <div class= " bg-warning text-black">
+                        <h4>
+                            Please enter the following information to predict wheather the customer will buy your product or not.
+                        </h4>
                     </div>
-                    <div class="mb-3  lead text-primary">
-                        <label  for="Per Capita Income">Administrative_Duration</label>
-                        <input  type="number" step="any" name="Administrative_Duration" id="Administrative_Duration" />  
+                    <div class='p-3'>
+                    <form action = "/send" method = "post">
+                        <div class="mb-3  lead text-primary">
+                            <label  for="Monthly Owner Cost">Administrative</label>
+                            <input  type="number" step="any" name="Administrative" id="Administrative" />                
+                        </div>
+                        <div class="mb-3  lead text-primary">
+                            <label  for="Per Capita Income">Administrative_Duration</label>
+                            <input  type="number" step="any" name="Administrative_Duration" id="Administrative_Duration" />  
+                        </div>
+                        <div class="mb-3  lead text-primary">
+                            <label  for="Lng">Informational</label>
+                            <input  type="number" step="any" name="Informational" id="Informational" />
+                        </div>
+                        <div class="mb-3  lead text-primary">
+                            <label  for="Household Income">Informational_Duration</label>
+                            <input  type="number" step="any" name="Informational_Duration" id="Informational_Duration" /> 
+                        </div>
+                        <div class="mb-3  lead text-primary">
+                            <label  for="College Rate">ProductRelated</label>
+                            <input  type="number" step="any" name="ProductRelated" id="ProductRelated" />
+                        </div>
+                        <div class="mb-3  lead text-primary">
+                            <label  for="Lat">ProductRelated_Duration</label>
+                            <input  type="number" step="any" name="ProductRelated_Duration" id="ProductRelated_Duration" />
+                        </div>
+                        <div class="mb-3  lead text-primary">
+                            <label  for="Personal Transport Rate">BounceRates</label>
+                            <input  type="number" step="any" name="BounceRates" id="BounceRates" /> 
+                        </div>
+                        <div class="mb-3  lead text-primary">
+                            <label  for="High School Rate">ExitRates</label>
+                            <input  type="number" step="any" name="ExitRates" id="ExitRates" /> 
+                        </div>
+                        <div class="mb-3  lead text-primary">
+                            <label  for="Median Age">PageValues</label>
+                            <input  type="number" step="any" name="PageValues" id="PageValues" />  
+                        </div>
                     </div>
-                    <div class="mb-3  lead text-primary">
-                        <label  for="Lng">Informational</label>
-                        <input  type="number" step="any" name="Informational" id="Informational" />
-                    </div>
-                    <div class="mb-3  lead text-primary">
-                        <label  for="Household Income">Informational_Duration</label>
-                        <input  type="number" step="any" name="Informational_Duration" id="Informational_Duration" /> 
-                    </div>
-                    <div class="mb-3  lead text-primary">
-                        <label  for="College Rate">ProductRelated</label>
-                        <input  type="number" step="any" name="ProductRelated" id="ProductRelated" />
-                    </div>
-                    <div class="mb-3  lead text-primary">
-                        <label  for="Lat">ProductRelated_Duration</label>
-                        <input  type="number" step="any" name="ProductRelated_Duration" id="ProductRelated_Duration" />
-                    </div>
-                    <div class="mb-3  lead text-primary">
-                        <label  for="Personal Transport Rate">BounceRates</label>
-                        <input  type="number" step="any" name="BounceRates" id="BounceRates" /> 
-                    </div>
-                    <div class="mb-3  lead text-primary">
-                        <label  for="High School Rate">ExitRates</label>
-                        <input  type="number" step="any" name="ExitRates" id="ExitRates" /> 
-                    </div>
-                    <div class="mb-3  lead text-primary">
-                        <label  for="Median Age">PageValues</label>
-                        <input  type="number" step="any" name="PageValues" id="PageValues" />  
-                    </div>
-                    <!-- Form submit button -->
-                    <div class="d-grid">
-                        <button class="btn btn-primary btn-lg" type="submit" value="submit">Submit</button>
-                    </div>
-                </form>
-                <h3 class='pt-4'> {{ prediction }}</h3>
+                        <!-- Form submit button -->
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg" type="submit" value="submit">Submit</button>
+                        </div>
+                    </form>
+                    <h3 class='pt-4'> {{ prediction }}</h3>
+                </div>
+      
             </div>
-        </section>     
+        </div> 
     </div>
 </section>
+
 <footer>
     <p>Copyright &copy; pandeysudip2022</p>
 </footer>

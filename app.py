@@ -29,6 +29,14 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/dashboard.html')
+def figure():
+    # Store the entire collection as a list
+
+    # Return the template
+    return render_template('dashboard.html')
+
+
 @app.route('/contact.html')
 def contact():
     # Return the template

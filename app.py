@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # Use PyMongo to establish Mongo connection
 client = MongoClient("mongodb://localhost:27017")
-db=client['e-commerce']  
+db = client['e-commerce']
 
 
 # creating collection (add mongo)
@@ -22,8 +22,11 @@ def home():
     # Return the template
     return render_template('home.html')
 
+
 @app.route('/index.html')
 def index():
+    # Return the template
+    return render_template('index.html')
 
 
 @app.route('/send', methods=["GET", "POST"])
@@ -34,15 +37,15 @@ def predic():
         Administrative_Duration = request.form.get("Administrative_Duration")
         Informational = request.form.get('Informational')
         Informational_Duration = request.form.get('Informational_Duration')
-        ProductRelated  = request.form.get('ProductRelated')
+        ProductRelated = request.form.get('ProductRelated')
         ProductRelated_Duration = request.form.get('ProductRelated_Duration')
         BounceRates = request.form.get('BounceRates')
-        ExitRates  = request.form.get('ExitRates')
-        PageValues   = request.form.get('PageValues')
-        variables = [Administrative, Administrative_Duration, 
-                     Informational,Informational_Duration,ProductRelated,
-                     ProductRelated_Duration,BounceRates,
-                     ExitRates, PageValues ]
+        ExitRates = request.form.get('ExitRates')
+        PageValues = request.form.get('PageValues')
+        variables = [Administrative, Administrative_Duration,
+                     Informational, Informational_Duration, ProductRelated,
+                     ProductRelated_Duration, BounceRates,
+                     ExitRates, PageValues]
         predict = model_load(variables)
 
         return render_template("index.html", pred=variables, prediction=predict)

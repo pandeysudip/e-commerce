@@ -13,9 +13,9 @@
                     <p class="text-white">
                         Used the data set that contains transactions occurring in an online store (E-commerce) to train the model. The data set contains 12,330 customer samples with 84.5% (10,422) were negative class samples (i.e. customers who did not end up buying the product), and the rest (1908) were positive class samples (i.e. customers who ended up buying).The dataset consists of 10 numerical and 8 categorical attributes.The differnt features used are:"Administrative", "Administrative Duration", "Informational", "Informational Duration", "Product Related",  "Product Related Duration", "Bounce Rate", "ExitRates", "Pages Values", "Special Day", "Revenue" and so on.
                     </p>
-                    <div class='bg-danger p-3'>
-                    <h4 class="text-center text-warning">Analysis</h4>
-                    <h5 class="text-white"> Since the dataset is unbalanced with large percentage around 90% is customers who did not buy the product, so we used sampling techniques. Both oversampling and undersampling technique is used to make even number of both target classes. Also different performances metrics are used to evalute the model</h5>
+                    <div class='bg-secondary p-3'>
+                    <h4 class="text-center text-warning">Analysis Procedure</h4>
+                    <h5 class="text-warning"> Since the dataset is unbalanced with large percentage around 90% is customers who did not buy the product, so we used sampling techniques. Both oversampling and undersampling technique is used to make even number of both target classes. Also different performances metrics are used to evalute the model</h5>
                     </div>    
                     
                     <div class='bg-black'>
@@ -39,7 +39,7 @@
 
                     <div class="container">
                         <div class="jumbotron text-center bg-dark text-light  p-3">
-                            <h4><span class="text-danger">Model performance of our best models</span></h4>
+                            <h4><span class="text-danger">Performance measures from the best models</span></h4>
                         </div >
                     </div >
                     
@@ -179,9 +179,13 @@
                     </form>
                     <h3 class='pt-4'> {{ prediction }}</h3>
                 </div>
-                
+                <div class='bg-info p-3'>
+                    <h4 class="text-center text-warning">Conclusion</h4>
+                    <h5 class="text-white"> Since the dataset is unbalanced with large percentage around 90% is customers who did not buy the product, so we used sampling techniques. Both oversampling and undersampling technique is used to make even number of both target classes. Also different performances metrics are used to evalute the model</h5>
+                    </div>
       
             </div>
+            
         </div> 
     </div>
 </section>

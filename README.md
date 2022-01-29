@@ -45,7 +45,7 @@ After downloading the data, I needed to clean it up so that it was usable for ou
 ## Under Sampling and Over Sampling
 In the original dataset, only 10% of customers buy the product. To get a truly accurate model, special techniques were used on imbalanced data.
 1. Undersampling: These data have been undersampled to give an even number of positive and negative class using undersampling techniques.
-2. Oversampling: Oversampling and SMOTE (Synthetic Minority Over-sampling ) technique is used to give an even number of positive and negative class.  
+2. Oversampling: Oversampling technique is used to give an even number of positive and negative class.  
 
 ## Preprocessing: 
 ### Scaling the data

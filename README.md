@@ -7,7 +7,8 @@ In this project, I built a machine learning model that attempts to predict wheth
 
 ## Background
 Used the data set that contains transactions occurring in an online store (E-commerce) to train the model. The data set contains 12,330 customer samples with 84.5% (10,422) were negative class samples (i.e. customers who did not end up buying the product), and the rest (1908) were positive class samples (i.e. customers who ended up buying).The dataset consists of 10 numerical and 8 categorical attributes.The differnt features used are:"Administrative", "Administrative Duration", "Informational", "Informational Duration", "Product Related", "Product Related Duration", "Bounce Rate", "ExitRates", "Pages Values", "Special Day", "Revenue" and so on.
-
+* Correlation of differnt columns with Revenue
+![Images33](Images/fig0.png)
 ## Data Structure
  This data set contains transactions occurring in an online store (E-commerce)
 
@@ -28,6 +29,18 @@ After downloading the data, I needed to clean it up so that it was usable for ou
 * Created  and saved over-sampling data for modeling
 
 ## Data visulization
+* Distribution of revenue over different columns
+![Images31](Images/fig1.png)
+![Images32](Images/fig2.png)
+![Images33](Images/fig3.png)
+
+* Box plot of Month vs Bounce Rate and Exit Rate
+![Images36](Images/fig4.png)
+![Images37](Images/fig5.png)
+
+* Box plot of Visitor type with different columns
+![Images36](Images/fig6.png)
+
 
 ## Under Sampling and Over Sampling
 In the original dataset, only 10% of customers buy the product. To get a truly accurate model, special techniques were used on imbalanced data.

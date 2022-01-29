@@ -86,7 +86,7 @@ Used Flask templating to create a new HTML page that predict wether customer wil
 
 Created a different route that take the user input and predict as well as other information.
 
-The website is deployed to Heroku at: https://pred-credit-risk.herokuapp.com/
+The website is deployed to Heroku at: https://online-customers.herokuapp.com/
 
 
 ![Images6.png](Images/heroku.png)

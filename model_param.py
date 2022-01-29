@@ -3,6 +3,8 @@ import numpy as np
 
 # defining a function for combining two columns
 def avgDuration(c, d):
+    c=float(c)
+    d=float(d)
     if d == 0 or c==0:
         result = 0
     elif (c!=0) or (d!=0):

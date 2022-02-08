@@ -1,139 +1,51 @@
 {% extends "layout.html" %}
 {% block body %}
 <!--Home-->
-<section id="tal" class="bg-dark text-light p-3 mt-5 text-center text-sm-start">
+<div id="back" class="p-5">
     <div>
-        <h3 class=" p-3 text-warning text-center">Artificial Intelligence (AI) to Predict Whether a Customer Will Buy a Product or Not</h3>
+        <h3 class=" p-5 text-warning text-center">Artificial Intelligence (AI) to Predict Whether a Customer Will Buy a Product or Not</h3>
     </div>
+    <div class="p-5">
+        <h1 class=" m-5 text-success text-center">Background</h1>
+        <p class="text-white lead bg-black p-3">
+            Used the data set that contains transactions occurring in an online store (E-commerce) to train the model. The data set contains 12,330 customer samples with 84.5% (10,422) were negative class samples (i.e. customers who did not end up buying the product), and the rest (1908) were positive class samples (i.e. customers who ended up buying).The dataset consists of 10 numerical and 8 categorical attributes.The differnt features used are:"Administrative", "Administrative Duration", "Informational", "Informational Duration", "Product Related",  "Product Related Duration", "Bounce Rate", "ExitRates", "Pages Values", "Special Day", "Revenue" and so on.
+        </p>
+    </div>
+</div>
+
+<div  id="back2" class='p-5'>
+    <h2 class="text-warning text-center">Differnt Model Used</h2>
+
+<p >
+    <ul class="text-white lead">
+        <li>Model 1: Stochastic Gradent Descent Classifier</li>
+        <li>Model 2: Logistic Regression</li>
+        <li>Model 3: Support Vector Classifier</li>
+        <li>Model 4: Decision Tree Classifier</li>
+        <li>Model 5: Random Forest Classifier</li>
+        <li>Model 6: Extremely Random Trees</li>
+        <li>Model 7: Boosting</li>
+    </ul>
+</p>
+
+</div>
+<section id="tal" class="text-light p-3 mt-5 text-center text-sm-start">
     <div class="sidebar">
         <div class="d-lg-flex">
-            <div class="container fluid">
-                <h3 class=" p-1 text-success text-center">Summary</h3>
-                <div>
-                    <p class="text-white">
-                        Used the data set that contains transactions occurring in an online store (E-commerce) to train the model. The data set contains 12,330 customer samples with 84.5% (10,422) were negative class samples (i.e. customers who did not end up buying the product), and the rest (1908) were positive class samples (i.e. customers who ended up buying).The dataset consists of 10 numerical and 8 categorical attributes.The differnt features used are:"Administrative", "Administrative Duration", "Informational", "Informational Duration", "Product Related",  "Product Related Duration", "Bounce Rate", "ExitRates", "Pages Values", "Special Day", "Revenue" and so on.
-                    </p>
-                    <div class='bg-secondary p-3'>
-                    <h4 class="text-center text-warning"></h4>
-                    <h5 class="text-warning"> </h5>
-                    </div>    
-                    
-                    <div class='bg-black'>
-                        <h4 class="text-success text-center">Differnt Model Used</h4>
-
-                    <p class="text-success">
-                        <ul>
-                            <li>Model 1: Stochastic Gradent Descent Classifier</li>
-                            <li>Model 2: Logistic Regression</li>
-                            <li>Model 3: Support Vector Classifier</li>
-                            <li>Model 4: Decision Tree Classifier</li>
-                            <li>Model 5: Random Forest Classifier</li>
-                            <li>Model 6: Extremely Random Trees</li>
-                            <li>Model 7: Boosting</li>
-                        </ul>
-                    </p>
-
-                    </div>
-
-                    
-
-                    <div class="container">
-                        <div class="jumbotron text-center bg-dark text-light  p-3">
-                            <h4><span class="text-danger">Performance measures from the best models</span></h4>
-                        </div >
-                    </div >
-                    
-                    <div class="container">
-                        <table class="table table-striped table table-bordered table-dark">
-                            <thead>
-                                <tr style="text-align: right;">
-                                  <th></th>
-                                  <th>SGD</th>
-                                  <th>logistic Reg</th>
-                                  <th>SVC</th>
-                                  <th>Decision Tree</th>
-                                  <th>Random Forest</th>
-                                  <th>Extra Random Tree</th>
-                                  <th>AdaBoost</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th>train score</th>
-                                  <td>0.808866</td>
-                                  <td>0.820828</td>
-                                  <td>0.829655</td>
-                                  <td>1.000000</td>
-                                  <td>0.950297</td>
-                                  <td>0.888633</td>
-                                  <td>1.000000</td>
-                                </tr>
-                                <tr>
-                                  <th>test score</th>
-                                  <td>0.796392</td>
-                                  <td>0.803493</td>
-                                  <td>0.819804</td>
-                                  <td>0.950681</td>
-                                  <td>0.924199</td>
-                                  <td>0.847246</td>
-                                  <td>0.943005</td>
-                                </tr>
-                                <tr>
-                                  <th>precision_score</th>
-                                  <td>0.834071</td>
-                                  <td>0.822695</td>
-                                  <td>0.842282</td>
-                                  <td>0.912037</td>
-                                  <td>0.893917</td>
-                                  <td>0.813493</td>
-                                  <td>0.902335</td>
-                                </tr>
-                                <tr>
-                                  <th>recall_score</th>
-                                  <td>0.733178</td>
-                                  <td>0.767017</td>
-                                  <td>0.781019</td>
-                                  <td>0.996110</td>
-                                  <td>0.960327</td>
-                                  <td>0.895760</td>
-                                  <td>0.991832</td>
-                                </tr>
-                                <tr>
-                                  <th>f1_score</th>
-                                  <td>0.780377</td>
-                                  <td>0.793881</td>
-                                  <td>0.810494</td>
-                                  <td>0.952222</td>
-                                  <td>0.925933</td>
-                                  <td>0.852647</td>
-                                  <td>0.944969</td>
-                                </tr>
-                                <tr>
-                                  <th>auc</th>
-                                  <td>0.894501</td>
-                                  <td>0.900322</td>
-                                  <td>0.907073</td>
-                                  <td>0.951275</td>
-                                  <td>0.977163</td>
-                                  <td>0.934809</td>
-                                  <td>0.943643</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                    </div>
-                    
-                        
-                </div>
-            </div>
             <div class="container p-2 ">
-                <h2 class='text-center'>Model Predection</h2>
+                <h2 class='text-center p-3'>Model Predection</h2>
                 <div class= "bg-black" >
-                    <div class= " bg-secondary text-warning">
+                    <div class= "  text-warning p-3">
                         <h4>
                             Please enter the following information to predict wheather the customer will buy your product or not.
                         </h4>
                     </div>
                     <div class='p-3'>
+                        <div class="col-md-4 mx-5 bg-warning">
+                            <h2 role="presentation" class="nav-item">
+                                <a href="index.html" class="nav-link lead text-white">Please click to refresh</a>
+                            </h2>
+                        </div>
                     <form action = "/send" method = "post">
                         <div class="mb-3  lead text-primary">
                             <label  for="Monthly Owner Cost">Administrative</label>
@@ -173,16 +85,18 @@
                         </div>
                     </div>
                         <!-- Form submit button -->
-                        <div class="d-grid">
+                        <div class="d-grid ">
                             <button class="btn btn-primary btn-lg" type="submit" value="submit">Submit</button>
                         </div>
                     </form>
-                    <h3 class='pt-4'> {{ prediction }}</h3>
+                    <h3 class='p-4 text-center'> {{ prediction }}</h3>
                 </div>
-                <div class='bg-black p-3'>
-                    <h4 class="text-center text-warning">Conclusion</h4>
-                    <h5 class="text-white"> Performed different feature engineering techniques to clean datasets and combined and binned different features. Since the dataset is unbalanced with large percentage around 90% is customers who did not buy the product, so sampling techniques is used. Both oversampling and undersampling techniques were used to make even number of both target classes. Also, different performances measures are used to evaluate the models. To improve model performances several low score features are removed and re-run all the models. From the analysis many customers who stay longer in the website usually buy the product.</h5>
+                <div class=' p-5'>
+                    <h2 class="text-center text-warning">Conclusion</h2>
+                    <h5 class="text-white p-5"> Machine learning algorithm were used to predict the customer behaviors. Both oversampling and undersampling techniques were used to train the data. Also, different performances measures are used to evaluate the models. To improve model performances several low score features are removed and re-run all the models. From the analysis many customers who stay longer in the website usually buy the product.</h5>
                     </div>
+
+                    <h3 class="p-5 text-center text-warning"> For any inquiry please <a href="contact.html" target="_blank">contact me</a></h3>
       
             </div>
             

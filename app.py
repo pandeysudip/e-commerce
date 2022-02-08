@@ -12,7 +12,7 @@ app = Flask(__name__)
 #client = MongoClient("mongodb://localhost:27017")
 #db = client['e-commerce']
 
-# os.environ.get('MONGO_URI', '')
+#
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI', '')
 app.config['MONG_DBNAME'] = 'e-commerce'
 mongo = PyMongo(app)

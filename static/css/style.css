@@ -5,7 +5,28 @@ body {
   a {
     color: blue;
   }
-
+  body {
+    background: url('../Images/back1.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  #back2 {
+    background: url('../Images/back3.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  #back3 {
+    background: url('../Images/back3.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
   footer {
     margin: 0em;
     padding: 1.2em;
